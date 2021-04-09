@@ -1,3 +1,4 @@
+"use strict";
 /*
 const friend1 = "michael";
 const friend2 = "stiven";
