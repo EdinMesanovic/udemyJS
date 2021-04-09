@@ -83,7 +83,7 @@ while (dice !== 6) {
 }
 */
 
-const bill = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 62];
+const bill = [22, 295, 176, 440, 37, 105, 10, 1100, 86, 52];
 const tips = [];
 const total = [];
 
@@ -92,10 +92,8 @@ function calcTip(n) {
 
   if (n >= 50 && n <= 300) {
     tot = n * 0.15;
-    console.log("tip is " + tot);
   } else {
     tot = n * 0.2;
-    console.log("tip is " + tot);
   }
   total.push(n + tot);
   tips.push(tot);
@@ -106,13 +104,13 @@ function calcAverage(arr) {
   for (let i = 0; i < arr.length; i++) {
     sum += arr[i];
   }
-  return sum;
+  return sum / arr.length;
 }
 
 for (let i = 0; i < bill.length; i ++) {
   calcTip(bill[i]);
   }
 
-console.log(calcAverage(bill));
-console.log(tips);
-console.log(total);
+console.log(bill);
+console.log(calcAverage(total));
+console.log(tips, total);
